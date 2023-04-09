@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/016/010/original/futuristic-threshold-with-reflections-on-wall-and-floor-free-video.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.title{
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+    font-weight: 600;
+}
+select, input{
+    box-shadow: 2px 4px 12px black,2px 4px 3px black;
+}
+#mainBody{
+    /*animation: 0.8s slideInFromTop;*/
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: rgba(255, 255, 255, 0.027);
+    backdrop-filter: blur(10px);
+    width: 110vh;
+    max-width: 90%;
+    padding: 10px 10px;
+    justify-content: space-around;
+    border-radius: 14px;
+    border: 2px solid black;
+    color: white;
+    text-shadow: 2px 4px 12px black,2px 4px 3px black;
+}
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-250%) scale(0);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+.betDiv{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 40px;
+    gap: 5px;
+}
+.betDiv #colorBet{
+    font-size: 15px;
+    width: 80px;
+    border: 1px solid;
+    border-radius: 2px;
+    height: 26px;
+}
+.betDiv input{
+    width: 150px;
+    border: 1px solid;
+    border-radius: 2px;
+    height: 24px;
+}
+#colorsDiv{
+    padding: 20px 20px;
+    display: flex;
+    margin: 20px;
+    background-color: black;
+    border-radius: 6px;
+    font-size: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    column-gap: 8%;
+}
+.colorText{
+    font-weight: 900;
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    height: 50px;
+}
+
+.buttons{
+    cursor:pointer;
+    height: 100%;
+    width: 30%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 4px 12px black,2px 4px 3px black;
+    transition: 0.2s;
+}
+.buttons:hover{
+    border: 1px solid;
+    font-size: 20px;
+    background-color: rgb(199, 199, 199);
+    box-shadow: -10px 0px 30px rgb(45, 64, 231), 
+        30px -10px 40px lightgreen,
+        0 10px 40px red;
+}
+.color{
+    text-align: center;
+    background-color: gray;
+    border-radius: 10px;
+    transition: 0.15s;
+    color: black;
+    text-shadow: none;
+}
+
+/* modal */
+
+.modalClass{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .4s;
+    border: 1px solid;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    max-width: 80%;
+    
+}
+.modalClass.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.modalHeader{
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.modalHeader .modalTitle{
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+.modalHeader .closeButton{
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: bold;
+}
+.modalClass .modalBody{
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.colorButts{
+    height: 100px;
+    width: 100px;
+}
+#overbg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .4s;
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+}
+#overbg.active{
+    pointer-events: all;
+    opacity: 1;
+}

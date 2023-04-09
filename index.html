@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div id="mainBody">
+        <div class="title">Color Game</div>
+        <div class="betDiv">
+            <div>Bet a color:
+                <select id="colorBet">
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="white">White</option>
+                    <option value="pink">Pink</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </div>
+            <div>
+                <label for="bet">Amount of Bet: </label>
+                <input type="number" id="bet" step="500" min="0" value="0" max="20000">
+            </div>
+        </div>
+        <div id="colorsDiv">
+            <div id="color1" class="color">
+                <span class="colorText" id="text1">Color 1</span>
+            </div>
+            <div id="color2" class="color">
+                <span class="colorText" id="text2">Color 2</span>
+            </div>
+            <div id="color3" class="color">
+                <span class="colorText" id="text3">Color 3</span>
+            </div>
+        </div>
+        <div class="buttonDiv">
+            <button id="ran" class="buttons">Randomize</button>
+        </div>
+    </div>
+    <div class="modalClass" id="modal">
+        <div class="modalHeader">
+            <div class="modalTitle" id="title"></div>
+            <button data-close="" class="closeButton">&times;</button>
+        </div>
+        <div class="modalBody" id="modalLabel">No Matches! You Lose -50,000</div>
+    </div>
+    <div id="overbg"></div>
+</body>
+
+</html>
