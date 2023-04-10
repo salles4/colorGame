@@ -216,8 +216,19 @@ select, input{
         font-size: 1rem;
         font-weight: 600;
     }
+    .modalClass{
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        width: 90%;
+    }
     .modalClass .modalBody{
-        padding: 30px 80px;
+        padding: 50px 60px;
+        flex-wrap: wrap;
+        font-size: 1.4rem;
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     #chooserModal{
         width: 90%;
