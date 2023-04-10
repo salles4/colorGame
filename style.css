@@ -19,7 +19,6 @@ select, input{
     box-shadow: 2px 4px 12px black,2px 4px 3px black;
 }
 #mainBody{
-    /*animation: 0.8s slideInFromTop;*/
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -37,13 +36,11 @@ select, input{
     color: white;
     text-shadow: 2px 4px 12px black,2px 4px 3px black;
 }
-@keyframes slideInFromTop {
-    0% {
-      transform: translateY(-250%) scale(0);
+@media (max-width: 479px) {
+    body{
+        background-image: url("https://i.pinimg.com/564x/f9/0d/f7/f90df7ec8c17699480412079d9953b75.jpg");
     }
-    100% {
-      transform: translateX(0);
-    }
+
 }
 .betDiv{
     display: flex;
@@ -173,7 +170,7 @@ select, input{
     padding-right: 90px;
 }
 #chooserModal{
-    min-width: 80%;
+    width: 40%;
     top: 300px;
 }
 #modalChooserBody{
@@ -188,6 +185,43 @@ select, input{
     font-weight: 600;
     border-radius: 6px;
     transform: scale(1);
+}
+@media (max-width: 479px) {
+    .colorText{
+        font-weight: 900;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #colorsDiv{
+        padding: 20px 20px;
+        background-color: black;
+        border-radius: 6px;
+        font-size: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        column-gap: 8%;
+    }
+    .buttons:hover{
+        font-size: 10px;
+    }
+    .colorButts{
+        height: 80px;
+        width: 80px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .modalClass .modalBody{
+        padding: 30px 80px;
+    }
+    #chooserModal{
+        width: 90%;
+    }
 }
 .colorButts:hover{
     box-shadow: 2px 2px 20px black;
