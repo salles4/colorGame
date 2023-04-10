@@ -55,11 +55,12 @@ select, input{
     gap: 5px;
 }
 .betDiv #colorBet{
+    cursor: pointer;
     font-size: 15px;
     width: 80px;
-    border: 1px solid;
+
     border-radius: 2px;
-    height: 26px;
+    height: 34px;
 }
 .betDiv input{
     width: 150px;
@@ -170,9 +171,30 @@ select, input{
     padding-left: 90px;
     padding-right: 90px;
 }
+#chooserModal{
+    width: 40%;
+    top: 40%;
+    
+}
+#modalChooserBody{
+    row-gap: 20px;
+    padding: 40px 30px;
+}
 .colorButts{
-    height: 100px;
-    width: 100px;
+    cursor: pointer;
+    height: 130px;
+    width: 130px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transform: scale(1);
+}
+.colorButts:hover{
+    box-shadow: 2px 2px 20px black;
+    transform: scale(1.1);
+}
+#error .modalHeader{
+    background-color: red;
 }
 #overbg{
     position: fixed;

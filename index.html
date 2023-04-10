@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Color Game</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2071/2071669.png">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -14,16 +15,11 @@
     <div id="mainBody">
         <div class="title">Color Game</div>
         <div class="betDiv">
-            <div>Bet a color:
-                <select id="colorBet">
-                    <option value="blue">Blue</option>
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
-                    <option value="white">White</option>
-                    <option value="pink">Pink</option>
-                    <option value="yellow">Yellow</option>
-                </select>
+            <div>
+                <span id="chooserDiv">Bet a color:</span>
+                <button id="colorBet" class="buttonColor" data-modal-target="#chooserModal">Choose</button>
             </div>
+
             <div>
                 <label for="bet">Amount of Bet: </label>
                 <input type="number" id="bet" step="500" min="0" value="0" max="20000">
@@ -44,12 +40,26 @@
             <button id="ran" class="buttons">Randomize</button>
         </div>
     </div>
-    <div class="modalClass" id="modal">
+    <div class="modalClass" id="error">
         <div class="modalHeader">
-            <div class="modalTitle" id="title"></div>
+            <div class="modalTitle">ERROR</div>
             <button data-close="" class="closeButton">&times;</button>
         </div>
-        <div class="modalBody" id="modalLabel">No Matches! You Lose -50,000</div>
+        <div class="modalBody" id="modalLabel">Please set your bet!</div>
+    </div>
+    <div class="modalClass" id="modal">
+        <div class="modalHeader">
+            <div class="modalTitle">Result</div>
+            <button data-close="" class="closeButton">&times;</button>
+        </div>
+        <div class="modalBody" id="resultLabel">No Matches! You Lose -50,000</div>
+    </div>
+    <div class="modalClass" id="chooserModal">
+        <div class="modalHeader">
+            <div class="modalTitle">Choose a Color to Bet</div>
+            <button data-close="" class="closeButton">&times;</button>
+        </div>
+        <div class="modalBody" id="modalChooserBody"></div>
     </div>
     <div id="overbg"></div>
 </body>
